@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ClawOps | The Transparent Agent</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=JetBrains+Mono:wght@400;700&amp;family=Space+Grotesk:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "tertiary-fixed": "#ffd6ff",
+                        "surface-bright": "#3a3939",
+                        "inverse-primary": "#00696e",
+                        "surface-container": "#201f1f",
+                        "surface-container-high": "#2a2a2a",
+                        "tertiary-fixed-dim": "#f8acff",
+                        "primary-container": "#00f5ff",
+                        "surface-tint": "#00dce5",
+                        "error": "#ffb4ab",
+                        "error-container": "#93000a",
+                        "surface-dim": "#131313",
+                        "surface-variant": "#353534",
+                        "background": "#131313",
+                        "tertiary-container": "#feceff",
+                        "on-tertiary-fixed-variant": "#7b0090",
+                        "outline-variant": "#3a494a",
+                        "on-surface-variant": "#b9caca",
+                        "on-secondary": "#263238",
+                        "on-tertiary-fixed": "#350040",
+                        "on-primary-fixed": "#002021",
+                        "primary": "#e9feff",
+                        "on-primary-container": "#006c71",
+                        "on-secondary-container": "#aab7bf",
+                        "secondary": "#bbc8d0",
+                        "surface-container-low": "#1c1b1b",
+                        "inverse-on-surface": "#313030",
+                        "primary-fixed": "#63f7ff",
+                        "on-secondary-fixed-variant": "#3c494f",
+                        "secondary-fixed-dim": "#bbc8d0",
+                        "inverse-surface": "#e5e2e1",
+                        "primary-fixed-dim": "#00dce5",
+                        "on-primary": "#003739",
+                        "on-tertiary-container": "#a600c2",
+                        "on-background": "#e5e2e1",
+                        "on-secondary-fixed": "#111d23",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-primary-fixed-variant": "#004f53",
+                        "surface": "#131313",
+                        "on-error-container": "#ffdad6",
+                        "on-surface": "#e5e2e1",
+                        "on-error": "#690005",
+                        "on-tertiary": "#570067",
+                        "secondary-fixed": "#d7e4ec",
+                        "outline": "#849495",
+                        "surface-container-highest": "#353534",
+                        "tertiary": "#fff8fa",
+                        "secondary-container": "#3c494f"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Space Grotesk"],
+                        "label": ["Space Grotesk"],
+                        "mono": ["JetBrains Mono"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            backdrop-filter: blur(12px);
+            background: rgba(53, 53, 52, 0.4);
+        }
+        .scanline {
+            background: linear-gradient(to bottom, transparent 50%, rgba(0, 245, 255, 0.05) 50%);
+            background-size: 100% 4px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-fixed">
+<!-- Top Navigation Anchor -->
+<nav class="bg-[#131313]/80 backdrop-blur-xl docked full-width top-0 z-50 shadow-[0_20px_50px_rgba(0,245,255,0.05)] flex justify-between items-center w-full px-12 py-4 fixed">
+<div class="font-['JetBrains_Mono'] text-xl font-black text-[#00F5FF] tracking-widest">TRANSPARENT_AGENT</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-[#00F5FF] border-b-2 border-[#00F5FF] pb-1 font-['Manrope'] tracking-tighter uppercase font-bold text-sm" href="#">LOGS</a>
+<a class="text-[#BBC8D0] hover:text-[#00F5FF] transition-colors font-['Manrope'] tracking-tighter uppercase font-bold text-sm" href="#">ARCHITECTURE</a>
+<a class="text-[#BBC8D0] hover:text-[#00F5FF] transition-colors font-['Manrope'] tracking-tighter uppercase font-bold text-sm" href="#">SYSTEM_CORE</a>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#00F5FF] cursor-pointer hover:bg-[#1C1B1B] p-2 rounded transition-all">monitor_heart</span>
+<span class="material-symbols-outlined text-[#00F5FF] cursor-pointer hover:bg-[#1C1B1B] p-2 rounded transition-all">settings</span>
+</div>
+</nav>
+<div class="bg-gradient-to-r from-[#131313] via-[#1C1B1B] to-[#131313] h-[1px] w-full fixed top-[72px] z-50"></div>
+<main class="flex min-h-screen pt-[73px]">
+<!-- Content Canvas -->
+<div class="flex-1 px-12 py-16">
+<!-- Hero Section -->
+<section class="max-w-4xl mb-24">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-surface-container-high mb-6 border-l-2 border-primary-container">
+<div class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></div>
+<span class="font-mono text-[10px] tracking-widest text-primary-container uppercase">System Online: Live Reasoning Active</span>
+</div>
+<h1 class="font-headline text-6xl md:text-8xl font-extrabold tracking-tighter mb-8 bg-gradient-to-br from-primary to-surface-variant bg-clip-text text-transparent">
+                    Trust through <br/><span class="text-primary-container">Transparency.</span>
+</h1>
+<p class="text-xl text-secondary max-w-2xl mb-10 leading-relaxed">
+                    Stop guessing what your AI is doing. ClawOps provides a raw, real-time logic stream of every decision, optimizing your business while keeping you in the pilot's seat.
+                </p>
+<div class="flex gap-4">
+<button class="bg-primary-fixed-dim text-on-primary-fixed px-8 py-4 font-headline font-bold text-sm tracking-widest uppercase rounded-sm hover:opacity-90 transition-all">
+                        DEPLOY_AGENT_V2
+                    </button>
+<button class="bg-surface-variant/30 backdrop-blur border border-outline-variant/30 text-primary px-8 py-4 font-headline font-bold text-sm tracking-widest uppercase rounded-sm hover:bg-surface-variant/50 transition-all">
+                        VIEW_REASONING_SAMPLES
+                    </button>
+</div>
+</section>
+<!-- Value Grid (Bento) -->
+<section class="grid grid-cols-12 gap-6 mb-24">
+<div class="col-span-12 md:col-span-8 bg-surface-container-low p-8 rounded-lg relative overflow-hidden group">
+<div class="relative z-10">
+<span class="font-mono text-tertiary-fixed-dim text-xs mb-4 block">CORE_MODULE_01</span>
+<h3 class="font-headline text-3xl font-bold text-on-surface mb-4">Bespoke Skill Synthesis</h3>
+<p class="text-secondary mb-6 max-w-md">Our agents don't just follow prompts. They learn your specific workflows, creating custom neural pathways for your unique business logic.</p>
+<div class="flex items-center gap-4 text-primary-container font-mono text-xs">
+<span class="p-2 bg-primary-container/10 rounded">99.8% ACCURACY</span>
+<span class="p-2 bg-primary-container/10 rounded">ZERO_LATENCY</span>
+</div>
+</div>
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-20 group-hover:opacity-30 transition-opacity">
+<img class="w-full h-full object-cover" data-alt="abstract digital visualization of complex neural network nodes connecting in dark space with neon cyan highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqJ3XKMNA_d085SRhBoVU2o-aoT43FZRsoF6O0ZL0l8cFCJULsPhR3EU6nXVXb106wmCKcfRkf-UR6J-8700-jtYJPWeTZoXAwQNmxCvlXGT41Wp0XYRnEcDi9ahlfGYywwQae16QzcfMmosNw157sWK1Wca13gwKV6sqcVZe1rongGM51vhW-EiAX3Ee37_HoBwUKkMWxWw9c8rrz9oAw11XVmqDUCAZnh1v_CrBhX2RPOP6Sn8J8DmSxpSmf1MW082XqUVLhblmX"/>
+</div>
+</div>
+<div class="col-span-12 md:col-span-4 bg-surface-container-high p-8 rounded-lg flex flex-col justify-between">
+<div>
+<span class="font-mono text-tertiary-fixed-dim text-xs mb-4 block">ECONOMY_METRIC</span>
+<h3 class="font-headline text-3xl font-bold text-on-surface mb-2">Save Time &amp; Capital</h3>
+<p class="text-secondary text-sm">Automating middle-office tasks reduces overhead by an average of 42% within 60 days of deployment.</p>
+</div>
+<div class="mt-8">
+<div class="text-5xl font-extrabold text-primary-container mb-2">42%</div>
+<div class="w-full h-1 bg-surface-variant">
+<div class="h-full bg-primary-container w-[42%]"></div>
+</div>
+</div>
+</div>
+<div class="col-span-12 md:col-span-4 bg-surface-container-high p-8 rounded-lg border-l-4 border-tertiary-fixed-dim">
+<span class="material-symbols-outlined text-tertiary-fixed-dim mb-4" style="font-size: 40px;">person_celebrate</span>
+<h3 class="font-headline text-2xl font-bold text-on-surface mb-2">1-on-1 Coaching</h3>
+<p class="text-secondary text-sm leading-relaxed">You're not just buying software; you're gaining an implementation partner. Personalized sessions to refine your agent's reasoning.</p>
+</div>
+<div class="col-span-12 md:col-span-8 bg-surface-container-lowest border border-outline-variant/10 p-8 rounded-lg relative overflow-hidden">
+<div class="flex justify-between items-start mb-12">
+<div>
+<h3 class="font-headline text-2xl font-bold text-on-surface mb-1">Architecture Overview</h3>
+<p class="font-mono text-[10px] text-outline uppercase tracking-widest">v2.0.4-STABLE / ENCRYPTED_TUNNEL</p>
+</div>
+<span class="material-symbols-outlined text-primary-container">security</span>
+</div>
+<div class="grid grid-cols-3 gap-4">
+<div class="h-32 bg-surface-container rounded flex items-center justify-center border border-outline-variant/10">
+<span class="font-mono text-[10px] text-secondary">INGESTION</span>
+</div>
+<div class="h-32 bg-surface-container-high rounded flex items-center justify-center border border-primary-container/20">
+<span class="font-mono text-[10px] text-primary-container">PROCESSING</span>
+</div>
+<div class="h-32 bg-surface-container rounded flex items-center justify-center border border-outline-variant/10">
+<span class="font-mono text-[10px] text-secondary">OUTPUT</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Terminal Sidebar (The Reasoning Console) -->
+<aside class="hidden lg:flex flex-col w-80 h-screen sticky top-0 bg-[#0E0E0E] border-l border-[#3A3939]/10 py-8 px-6">
+<div class="mb-8">
+<div class="flex items-center gap-2 text-[#F8ACFF] font-bold mb-1">
+<span class="material-symbols-outlined text-sm">terminal</span>
+<span class="font-mono text-xs uppercase tracking-tight">REASONING_CONSOLE</span>
+</div>
+<div class="font-mono text-[10px] text-secondary opacity-60">V2.0.4-STABLE</div>
+</div>
+<div class="flex-1 flex flex-col gap-4 overflow-hidden">
+<!-- Log Stream -->
+<div class="flex flex-col gap-3 font-mono text-[11px] leading-tight">
+<div class="flex gap-2 text-primary-container animate-pulse">
+<span class="opacity-50">[14:02:11]</span>
+<span>ANALYZING_WORKFLOW...</span>
+</div>
+<div class="flex gap-2 text-secondary">
+<span class="opacity-50">[14:02:12]</span>
+<span>IDENTIFIED: BOTTLE_NECK_IN_CRM</span>
+</div>
+<div class="flex gap-2 text-[#F8ACFF]">
+<span class="opacity-50">[14:02:14]</span>
+<span>SUGGESTING: API_RESTRUCTURING</span>
+</div>
+<div class="flex flex-col gap-1 ml-4 border-l border-outline-variant/30 pl-3 my-2">
+<span class="text-outline text-[10px]">THOUGHT: "Reducing overhead by skipping redundant validation steps while maintaining ISO compliance."</span>
+</div>
+<div class="flex gap-2 text-primary-container">
+<span class="opacity-50">[14:02:18]</span>
+<span>OPTIMIZING_CRM_FLOW...</span>
+</div>
+<div class="flex gap-2 text-secondary">
+<span class="opacity-50">[14:02:22]</span>
+<span>VALIDATING_SECURITY_PROTOCOL...</span>
+</div>
+<div class="flex gap-2 text-error">
+<span class="opacity-50">[14:02:25]</span>
+<span>CHECKING: PERMISSION_ANOMALY</span>
+</div>
+<div class="flex gap-2 text-primary-container">
+<span class="opacity-50">[14:02:30]</span>
+<span>ENCRYPTING_OUTPUT_DATA...</span>
+</div>
+</div>
+</div>
+<!-- Side Nav Tabs -->
+<div class="mt-8 border-t border-outline-variant/10 pt-6 flex flex-col">
+<a class="flex items-center gap-3 bg-[#1C1B1B] text-[#00F5FF] border-l-4 border-[#00F5FF] py-3 px-4 mb-1 transition-all" href="#">
+<span class="material-symbols-outlined text-sm">terminal</span>
+<span class="font-mono text-xs uppercase tracking-tight">LOGIC_STREAM</span>
+</a>
+<a class="flex items-center gap-3 text-[#BBC8D0] py-3 px-4 hover:bg-[#1C1B1B]/50 transition-all hover:translate-x-1 duration-200" href="#">
+<span class="material-symbols-outlined text-sm">memory</span>
+<span class="font-mono text-xs uppercase tracking-tight">MEMORY_MAP</span>
+</a>
+<a class="flex items-center gap-3 text-[#BBC8D0] py-3 px-4 hover:bg-[#1C1B1B]/50 transition-all hover:translate-x-1 duration-200" href="#">
+<span class="material-symbols-outlined text-sm">security</span>
+<span class="font-mono text-xs uppercase tracking-tight">BIAS_ANALYSIS</span>
+</a>
+<a class="flex items-center gap-3 text-[#BBC8D0] py-3 px-4 hover:bg-[#1C1B1B]/50 transition-all hover:translate-x-1 duration-200" href="#">
+<span class="material-symbols-outlined text-sm">psychology</span>
+<span class="font-mono text-xs uppercase tracking-tight">NEURAL_PATH</span>
+</a>
+</div>
+<button class="mt-8 w-full bg-primary-container text-on-primary-fixed font-headline font-bold text-[10px] tracking-widest uppercase py-4 rounded-sm hover:opacity-90">
+                INITIATE_DEBUG
+            </button>
+</aside>
+</main>
+<!-- Footer Anchor -->
+<footer class="bg-[#0E0E0E] w-full py-12 px-12 mt-20 border-t border-[#3A3939]/10 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="font-['JetBrains_Mono'] text-[10px] opacity-60 text-[#BBC8D0] uppercase tracking-widest">© 2024 NEURAL_CORE_TRANS_AGENT</div>
+<div class="flex gap-10">
+<a class="text-[#BBC8D0] hover:text-[#00F5FF] underline decoration-[#00F5FF]/30 font-['JetBrains_Mono'] text-[10px] uppercase" href="#">NEURAL_ARCHITECTURE</a>
+<a class="text-[#BBC8D0] hover:text-[#00F5FF] underline decoration-[#00F5FF]/30 font-['JetBrains_Mono'] text-[10px] uppercase" href="#">TRANSPARENCY_REPORT</a>
+<a class="text-[#BBC8D0] hover:text-[#00F5FF] underline decoration-[#00F5FF]/30 font-['JetBrains_Mono'] text-[10px] uppercase" href="#">API_RESOURCES</a>
+</div>
+<div class="flex gap-4">
+<div class="w-1.5 h-1.5 rounded-full bg-primary-container"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-surface-bright"></div>
+</div>
+</footer>
+<!-- Mobile Bottom Nav Anchor -->
+<div class="md:hidden fixed bottom-0 left-0 w-full bg-[#131313]/90 backdrop-blur-lg border-t border-outline-variant/20 flex justify-around py-4 z-50">
+<span class="material-symbols-outlined text-primary-container">terminal</span>
+<span class="material-symbols-outlined text-secondary">memory</span>
+<span class="material-symbols-outlined text-secondary">security</span>
+<span class="material-symbols-outlined text-secondary">psychology</span>
+</div>
+</body></html>
